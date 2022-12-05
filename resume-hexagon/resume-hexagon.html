@@ -1,0 +1,872 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  <title>CV - Stuart Wilson</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
+    integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css"
+    integrity="sha512-OivR4OdSsE1onDm/i3J3Hpsm5GmOVvr9r49K3jJ0dnsxVzZgaOJ5MfxEAxCyGrzWozL9uJGKz6un3A7L+redIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/solid.min.css"
+    integrity="sha512-qzgHTQ60z8RJitD5a28/c47in6WlHGuyRvMusdnuWWBB6fZ0DWG/KyfchGSBlLVeqAz+1LzNq+gGZkCSHnSd3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	line-height: 1.5;
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* ========================================================================== */
+:root {
+	--color-bg: #e9e8ea;
+	--color-primary: #e9e8ea;
+	--color-secondary: #101e32;
+	--color-secondary-alpha: #101e329f;
+	--color-skill-level: var(--color-primary);
+	--hex-size: 3rem;
+	--icon-size: 1.5rem;
+}
+
+@page {
+	size: A4 portrait;
+	margin: 0;
+}
+
+@media print {
+	a {
+		color: var(--color-secondary);
+		display: initial;
+	}
+
+	.summary a::after {
+		content: " (" attr(href) ")";
+	}
+
+	.company {
+		break-inside: avoid;
+	}
+}
+
+html,
+body {
+	font-size: 12px;
+}
+
+body {
+	border: none;
+	display: grid;
+	color: var(--color-secondary);
+	background-color: var(--color-bg);
+	font-family: Roboto, sans-serif;
+	grid-template-columns: 20rem 2fr;
+	grid-template-areas: "sidebar main";
+}
+
+main {
+	border: none;
+	grid-area: main;
+	padding-bottom: 2rem;
+	background-color: var(--color-bg);
+	--color-hexagon: var(--color-secondary);
+	--color-icon: var(--color-secondary);
+}
+
+aside {
+	border: none;
+	grid-area: sidebar;
+	color: var(--color-primary);
+	background-size: cover;
+	background-color: var(--color-secondary);
+	--color-hexagon: var(--color-primary);
+	--color-icon: var(--color-secondary);
+}
+
+aside a {
+	color: var(--color-primary);
+}
+
+aside li {
+	display: flex;
+	align-items: center;
+	margin: 0.5rem 0;
+}
+
+aside li>div {
+	padding: 0 0.5rem;
+}
+
+aside .heading {
+	--color-icon: var(--color-primary);
+	--hex-size: 3rem;
+	--icon-size: 1.5rem;
+}
+
+section {
+	padding-left: 1rem;
+}
+
+summary {
+	font-size: 1rem;
+	line-height: 1.125;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+i[class^="fa-"] {
+	color: var(--color-icon, white);
+	font-size: var(--icon-size);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	page-break-after: avoid;
+}
+
+h1 {
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 1.1rem;
+	font-weight: 400;
+}
+
+h3 {
+	border: none;
+	display: flex;
+	align-items: center;
+	font-weight: 400;
+	position: relative;
+	letter-spacing: .125rem;
+	text-transform: uppercase;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+sup {
+	display: inline-block;
+	--color-icon: none;
+	--icon-size: none;
+}
+
+.dates {
+	font-size: .9rem;
+	margin-bottom: 5px;
+	--color-icon: none;
+	--icon-size: none;
+}
+
+.dates>i {
+	margin: .25rem;
+	opacity: 0.7;
+}
+
+.photo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 2rem auto 0.5rem;
+	width: 10rem;
+	height: 10rem;
+	position: relative;
+	--hex-size: none;
+	--color-hexagon: var(--color-primary);
+}
+
+.name {
+	color: #fff;
+	text-align: center;
+	font-size: 1.75rem;
+	text-transform: uppercase;
+}
+
+.name>span:first-of-type {
+	color: var(--color-primary);
+	font-weight: 300;
+}
+
+.title {
+	color: var(--color-primary);
+	font-size: 1.25rem;
+	font-weight: 300;
+	text-align: center;
+}
+
+.heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem 0 1rem;
+}
+
+.heading>h3 {
+	padding: 0 1rem 0 0.5rem;
+}
+
+.heading>hr {
+	flex: 1;
+	border: none;
+	border-bottom: 2px solid var(--color-icon);
+}
+
+.heading>h4 {
+	display: flex;
+	flex-direction: column;
+	font-size: 1.25rem;
+}
+
+.heading>h4>a {
+	font-size: .9rem;
+	opacity: 0.6;
+}
+
+.heading>.hex-icon {
+	--hex-size: 3rem;
+	--icon-size: 1.25rem;
+}
+
+.work .company,
+.education .institution {
+	padding-right: 1rem;
+}
+
+.work .company .heading,
+.education .institution .heading {
+	align-items: unset;
+}
+
+.work>div:nth-child(2) .heading,
+.education>div:nth-child(2) .heading {
+	padding-top: 0;
+}
+
+.work .position {
+	font-size: 0.9rem;
+	opacity: 0.6;
+}
+
+.work .summary {
+	margin: 8px 0 16px 0;
+}
+
+.work .highlights {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2px;
+	font-size: .5rem;
+}
+
+.work .highlights>.stack {
+	color: white;
+	display: inline;
+	padding: 2px 8px;
+	transform: skewX(-15deg);
+	border-radius: 8px 0 8px 0;
+	background-color: var(--color-secondary);
+}
+
+.skill-group {
+	break-inside: avoid;
+	padding-top: 1rem;
+}
+
+.skills>div:nth-of-type(2) {
+	padding-top: 0;
+}
+
+.skills h5 {
+	opacity: 0.6;
+}
+
+.skill {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0px 1rem 0 0.5rem;
+}
+
+.skill>h3 {
+	display: inline-block;
+	margin: 1rem 0;
+}
+
+.skill-level {
+	height: .5rem;
+	width: 1rem;
+	display: inline-block;
+	transform: skewX(-45deg);
+	opacity: .25;
+	background-color: var(--color-skill-level);
+}
+
+.skill-level-active {
+	opacity: 1;
+}
+
+.hex {
+	width: var(--hex-size, 2rem);
+	height: var(--hex-size, 2rem);
+	mask-repeat: no-repeat;
+	-webkit-mask-repeat: no-repeat;
+	mask-position: center center;
+	-webkit-mask-position: center center;
+	background-color: var(--color-hexagon, --color-primary);
+}
+
+.hex-border {
+	mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTA2LjQ0IDEyMi44OCI+CiAgPHBhdGggZmlsbD0iY3VycmVudENvbG9yIgogICAgZD0iTTU1LjA2LDEuMDdsNTEuMzcsMjkuNjZ2NjEuNDNsLTUzLjIyLDMwLjczTDAsOTIuMTVWMzAuNzNMNTMuMjIsMEw1NS4wNiwxLjA3TDU1LjA2LDEuMDd6IE03Ni4xMywyMS43NEw1My4yMiw4LjUxIEw3LjM5LDM0Ljk3djUyLjk0bDQ1LjgzLDI2LjQ2bDQ1LjgzLTI2LjQ2VjM0Ljk3TDc2LjEzLDIxLjc0TDc2LjEzLDIxLjc0eiIgLz4KPC9zdmc+Cg==");
+	-webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTA2LjQ0IDEyMi44OCI+CiAgPHBhdGggZmlsbD0iY3VycmVudENvbG9yIgogICAgZD0iTTU1LjA2LDEuMDdsNTEuMzcsMjkuNjZ2NjEuNDNsLTUzLjIyLDMwLjczTDAsOTIuMTVWMzAuNzNMNTMuMjIsMEw1NS4wNiwxLjA3TDU1LjA2LDEuMDd6IE03Ni4xMywyMS43NEw1My4yMiw4LjUxIEw3LjM5LDM0Ljk3djUyLjk0bDQ1LjgzLDI2LjQ2bDQ1LjgzLTI2LjQ2VjM0Ljk3TDc2LjEzLDIxLjc0TDc2LjEzLDIxLjc0eiIgLz4KPC9zdmc+Cg==");
+}
+
+.hex-solid {
+	transform: scale(0.95);
+	mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNzMuMjA1MDgwNzU2ODg3NzIgMjAwIj4KICA8cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiCiAgICBkPSJNODYuNjAyNTQwMzc4NDQzODYgMEwxNzMuMjA1MDgwNzU2ODg3NzIgNTBMMTczLjIwNTA4MDc1Njg4NzcyIDE1MEw4Ni42MDI1NDAzNzg0NDM4NiAyMDBMMCAxNTBMMCA1MFoiPjwvcGF0aD4KPC9zdmc+Cg==");
+	-webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNzMuMjA1MDgwNzU2ODg3NzIgMjAwIj4KICA8cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiCiAgICBkPSJNODYuNjAyNTQwMzc4NDQzODYgMEwxNzMuMjA1MDgwNzU2ODg3NzIgNTBMMTczLjIwNTA4MDc1Njg4NzcyIDE1MEw4Ni42MDI1NDAzNzg0NDM4NiAyMDBMMCAxNTBMMCA1MFoiPjwvcGF0aD4KPC9zdmc+Cg==");
+}
+
+.hex-absolute {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.hex-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	--hex-size: 2rem;
+	--icon-size: 1rem;
+}
+
+.hex-icon>i[class^="fa-"] {
+	position: absolute;
+}
+
+.hex-icon>img {
+  position: absolute;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.langicon {
+  width: 1.5rem;
+  z-index: 100;
+}
+
+.rails {
+  width: 2.5rem;
+}
+
+.htm {
+  width: 2rem;
+}
+</style>
+</head>
+
+<body resume>
+  <aside>
+    <div class="photo">
+      <div class="hex hex-border hex-absolute"></div>
+      <div class="hex hex-solid">
+          <img src="images/profile.jpg" alt="photo">
+      </div>
+    </div>
+
+    <div class="name">
+      <span class="firstName">Stuart</span> <span class="lastName">Wilson</span>
+    </div>
+
+    <div class="title">
+      Ruby on Rails Developer
+    </div>
+
+    <section class="contacts">
+      <div class="heading">
+        <div class="hex-icon">
+          <div class="hex hex-border"></div>
+          <i class="fa-solid fa-id-badge"></i>
+        </div>
+        <h3>CONTACT ME</h3>
+        <hr />
+      </div>
+
+      <ul>
+        <li>
+          <div class="hex-icon">
+            <div class="hex hex-solid"></div>
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div>
+            (936) 537-2399
+          </div>
+        </li>
+        <li>
+          <div class="hex-icon">
+            <div class="hex hex-solid"></div>
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div>
+            <a href="mailto:stuartwilson94@gmail.com">stuartwilson94@gmail.com</a>
+          </div>
+        </li>
+        <li>
+          <div class="hex-icon">
+            <div class="hex hex-solid"></div>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div>
+            <a target="_blank" href="https://stuartlwilson.dev">
+              stuartlwilson.dev
+              <sup>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </sup>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="hex-icon">
+            <div class="hex hex-solid"></div>
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            Montgomery, TX
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="skills">
+      <div class="heading">
+        <div class="hex-icon">
+          <div class="hex hex-border"></div>
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h3>SKILLS</h3>
+        <hr/>
+      </div>
+      <div class="icons">
+        <img class="langicon" src="images/Javascript.svg"></img>
+        <img class="langicon htm" src="images/HTML.svg"></img>
+        <img class="langicon" src="images/CSS.svg"></img>
+        <img class="langicon" src="images/Ruby.svg"></img>
+        <img class="langicon rails" src="images/Rails.svg"></img>
+      </div>
+
+
+
+    </section>
+
+    <section class="social">
+      <div class="heading">
+        <div class="hex-icon">
+          <div class="hex hex-border"></div>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+        <h3>CONNECT</h3>
+        <hr />
+      </div>
+
+      <ul>
+        <li>
+          <div class="hex-icon">
+            <div class="hex hex-solid"></div>
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          <a rel="noreferrer" target="_blank" href="https://twitter.com/StuartW64954805" title="Twitter">
+            twitter.com/StuartW64954805
+            <sup>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </sup>
+          </a>
+        </li>
+        <li>
+          <div class="hex-icon">
+            <div class="hex hex-solid"></div>
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+          <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/stuart-wilson-72b61a10/" title="LinkedIn">
+            www.linkedin.com/in/stuart-wilson-72b61a10
+            <sup>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </sup>
+          </a>
+        </li>
+        <li>
+          <div class="hex-icon">
+            <div class="hex hex-solid"></div>
+            <i class="fa-brands fa-github"></i>
+          </div>
+          <a rel="noreferrer" target="_blank" href="https://github.com/DebakeDSP94" title="Github">
+            github.com/DebakeDSP94
+            <sup>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </sup>
+          </a>
+        </li>
+      </ul>
+      </div>
+    </section>
+  </aside>
+
+  <main>
+    <section class="profile">
+      <div class="heading">
+        <div class="hex-icon">
+          <div class="hex hex-border"></div>
+          <i class="fa-solid fa-id-badge"></i>
+        </div>
+        <h3>PROFILE</h3>
+        <hr />
+      </div>
+
+      <summary>Stuart grew up in Indonesia with a few years in London and Sydney in between the 3 times he lived in Jakarta.  He attended Jakarta International School before going to Stephen F. Austin State University where he pursued a major in Computer Science prior to graduating with a Bachelors of Environmental Science with a Math minor. He has had a diverse work history in sales, customer service, and team leadership.  He has held licences and certifications in several fields. He attempted to start a business before deciding to make a return to computer scence and specialize in web development through The Odin Project.</summary>
+    </section>
+
+    <section class="work">
+      <div class="heading">
+        <div class="hex-icon">
+          <div class="hex hex-border"></div>
+          <i class="fa-solid fa-briefcase"></i>
+        </div>
+        <h3>WORK EXPERIENCE</h3>
+        <hr />
+      </div>
+
+      <div class="company">
+
+        <div class="heading">
+          <h4>
+            Chair Weasel LLC
+            <a href="http://chairweasel.com" target="_blank">chairweasel.com</a>
+          </h4>
+
+          <div class="dates">
+            <i class="fa-solid fa-calendar-days"></i>
+            Mar 2018 - Dec 2022
+          </div>
+        </div>
+
+        <div class="position">CEO/President</div>
+        <div class="summary"><p>Chair weasel is a small business developing a product to make it easier to transport your camping chair to sports events and other venues.</p>
+</div>
+
+        <div class="highlights">
+          <div class="stack">Self taught CAD and 3D-printing.</div>
+          <div class="stack">Research all aspects of product development.</div>
+          <div class="stack">Wrote a provisional patent for designed product.</div>
+          <div class="stack">Designed functionally optimized product over many iterations using printed parts and parts from prototyping services.</div>
+        </div>
+      </div>
+      <div class="company">
+
+        <div class="heading">
+          <h4>
+            Longbridge Financial, LLC
+            <a href="https://longbridge-financial.com/" target="_blank">longbridge-financial.com/</a>
+          </h4>
+
+          <div class="dates">
+            <i class="fa-solid fa-calendar-days"></i>
+            Oct 2016 - Mar 2018
+          </div>
+        </div>
+
+        <div class="position">Loan Officer</div>
+        <div class="summary"><p>Handle all aspects of loan origination from initial contact of the customer through to the closing.</p>
+</div>
+
+        <div class="highlights">
+          <div class="stack">Worked on special teams due to high performance despite being newest member of the company.</div>
+          <div class="stack">3rd highest in originations in first year.</div>
+          <div class="stack">Excellent grasp of underwriting guidelines and procedures.</div>
+        </div>
+      </div>
+      <div class="company">
+
+        <div class="heading">
+          <h4>
+            Uretek ICR Gulf Coast
+            <a href="https://uretek-gulfcoast.com/" target="_blank">uretek-gulfcoast.com/</a>
+          </h4>
+
+          <div class="dates">
+            <i class="fa-solid fa-calendar-days"></i>
+            Sep 2013 - Oct 2016
+          </div>
+        </div>
+
+        <div class="position">Sales Representative</div>
+        <div class="summary"><p>Go on four sales appointments per day, take measurements, provide a proposal for repairs.</p>
+</div>
+
+        <div class="highlights">
+          <div class="stack">Create proposals for repairs in residential structures.</div>
+          <div class="stack">Meet with facility management and create proposal for repairs in commercial and industrial setting.</div>
+          <div class="stack">Networked with engineers and municipal infrastructure managers.</div>
+        </div>
+      </div>
+      <div class="company">
+
+        <div class="heading">
+          <h4>
+            Complience Resources Inc
+            <a href="https://complianceresourcesinc.com/" target="_blank">complianceresourcesinc.com/</a>
+          </h4>
+
+          <div class="dates">
+            <i class="fa-solid fa-calendar-days"></i>
+            Apr 2006 - Jun 2013
+          </div>
+        </div>
+
+        <div class="position">Team Leader</div>
+        <div class="summary"><p>Lead team of 6 inspectors, and performed field environmental inspections and audits.</p>
+</div>
+
+        <div class="highlights">
+          <div class="stack">CESSWI certified.</div>
+          <div class="stack">Conduct weekly site inspections of construction sites.</div>
+          <div class="stack">Assist manager in yearly budget and operations plans.</div>
+          <div class="stack">Perform regular reviews of team members and QC.</div>
+          <div class="stack">Train new team members and provide orientation.</div>
+        </div>
+      </div>
+      <div class="company">
+
+        <div class="heading">
+          <h4>
+            Self at Andora Mortgage Group
+            <a href="" target="_blank"></a>
+          </h4>
+
+          <div class="dates">
+            <i class="fa-solid fa-calendar-days"></i>
+            Jan 2005 - Apr 2006
+          </div>
+        </div>
+
+        <div class="position">Loan Officer</div>
+        <div class="summary"><p>Self employed 100% commission loan officer.</p>
+</div>
+
+        <div class="highlights">
+          <div class="stack">Acquired leads through online lead sources at own expense.</div>
+          <div class="stack">Marketed and networked with realtors and other sources.</div>
+        </div>
+      </div>
+      <div class="company">
+
+        <div class="heading">
+          <h4>
+            Oak Street Mortgage
+            <a href="" target="_blank"></a>
+          </h4>
+
+          <div class="dates">
+            <i class="fa-solid fa-calendar-days"></i>
+            Oct 2004 - Dec 2005
+          </div>
+        </div>
+
+        <div class="position">Mortgage Loan Officer</div>
+        <div class="summary"><p>Licensed mortgage loan Officer.</p>
+</div>
+
+        <div class="highlights">
+          <div class="stack">Opened a branch for this company along with manager and teammates from previous mortgage company.</div>
+        </div>
+      </div>
+      <div class="company">
+
+        <div class="heading">
+          <h4>
+            Axiom Financial Services
+            <a href="" target="_blank"></a>
+          </h4>
+
+          <div class="dates">
+            <i class="fa-solid fa-calendar-days"></i>
+            Jun 2003 - Oct 2004
+          </div>
+        </div>
+
+        <div class="position">Mortgage Loan Officer</div>
+        <div class="summary"><p>Licensed Mortgage Loan Officer.</p>
+</div>
+
+        <div class="highlights">
+          <div class="stack">We took over this branch as a team after previous team left.</div>
+        </div>
+      </div>
+      <div class="company">
+
+        <div class="heading">
+          <h4>
+            Conseco Financial Services
+            <a href="" target="_blank"></a>
+          </h4>
+
+          <div class="dates">
+            <i class="fa-solid fa-calendar-days"></i>
+            Jul 2002 - Apr 2003
+          </div>
+        </div>
+
+        <div class="position">Mortgage Loan Officer</div>
+        <div class="summary"><p>Licensed Mortgage Loan Officer.</p>
+</div>
+
+        <div class="highlights">
+          <div class="stack">Mortgage refinance sales and customer service</div>
+          <div class="stack">Conseco became the 3rd largest bankruptcy at the time behind Enron and Worldcom</div>
+        </div>
+      </div>
+      <div class="company">
+
+        <div class="heading">
+          <h4>
+            Aim Mutual Funds
+            <a href="https://www.invesco.com" target="_blank">www.invesco.com</a>
+          </h4>
+
+          <div class="dates">
+            <i class="fa-solid fa-calendar-days"></i>
+            Oct 1999 - May 2002
+          </div>
+        </div>
+
+        <div class="position">Rep 5 / Associate Development Specialist</div>
+        <div class="summary"><p>Top level customer service and processing of accounts.</p>
+</div>
+
+        <div class="highlights">
+          <div class="stack">Associate Development Specialist role - All new people would sit with us for a few weeks for mentoring and orientation after training, and we would provide an assessment to their future supervisors of their strengths.</div>
+          <div class="stack">Participated in many teams on update of the transfer agency system.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="education">
+      <div class="heading">
+        <div class="hex-icon">
+          <div class="hex hex-border"></div>
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <h3>EDUCATION</h3>
+        <hr />
+      </div>
+
+      <div class="institution">
+        <div class="heading">
+          <h4>
+            Stephen F. Austin State University
+            <a href="https://www.sfasu.edu/" target="_blank">www.sfasu.edu/</a>
+          </h4>
+
+          <div class="dates">
+            <i class="fa-solid fa-calendar-days"></i>
+            Sep 1992 - Jun 1999
+          </div>
+        </div>
+        <div class="area">Environmental Science</div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
